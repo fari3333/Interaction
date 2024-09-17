@@ -1,0 +1,35 @@
+/* Global styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.content, .flag-content {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 800px;
+}
+
+/* Button styling */
+a.button {
+    display: inline-block;
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+a.button:hover {
+    background-color: #cc0000;
+}
