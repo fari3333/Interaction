@@ -1,35 +1,211 @@
-/* Global styling */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+body
+
+{ 
+cursor: url(cursor.png)
 }
+
+
 
 header {
-    background-color: #003366;
-    color: white;
+  position: static;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
-    text-align: center;
+    background-color: #f9f9f9;
 }
 
-.content, .flag-content {
-    text-align: center;
-    margin: 50px auto;
-    max-width: 800px;
+header h1 {
+    font-size: 5rem; /* Large and bold title */
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+}
+/* Back to Homepage link */
+.homepage-link {
+  position: absolute;
+  bottom: auto;
+  text-align: center;
+  width: 100%;
 }
 
-/* Button styling */
-a.button {
-    display: inline-block;
-    background-color: #003366;
-    color: white;
-    padding: 10px 20px;
+/* Styling for the "Back to Homepage" button */
+.button {
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  font-size: 12px;
+  font-family: 'Helvetica', sans-serif; /* Custom font */
+}
+
+
+  
+/* Links to Entry 1 and Entry 2 */
+.entries {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.entry-link {
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    color: #000000;
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
-a.button:hover {
-    background-color: #cc0000;
+.entry-link:hover {
+    text-decoration: underline;
+}
+.star:hover {
+  transform: scale(1.2); /* Slightly enlarge on hover */
+  transition: transform 0.2s ease-in-out; /* Smooth animation */
+}
+
+.stripe:hover {
+  opacity: 0.7; /* Dim the stripes on hover */
+  transition: opacity 0.2s ease-in-out;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+  }
+ .USA-flag {
+  margin:auto;
+  width: 1200px; /* Set flag width */
+  height: 650px; 
+  box-shadow: 0px 20px 80px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.stripe {
+  background-color:#b30000;
+  width: 100%;
+  height: calc(650px / 13); /* 13 stripes in total */
+}
+
+.stripe--white {
+  background-color: white;
+}
+
+.USA-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 480px; /* Adjust star field width */
+  height: calc((650px / 13) * 7); /* 7 stripes covered */
+  background-color: #041E42;
+  z-index: 1;
+  padding: 20px; /* Increase padding for better spacing */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Evenly space rows */
+}
+
+.star-row {
+  display: flex;
+  justify-content: space-between; /* Space stars in each row */
+}
+
+.star-row--five {
+  padding: 0px 30px; /* Reduce padding for centering 5 stars */
+}
+
+.star {
+  font-size: 25px; /* Slightly reduce font size */
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: -4px; /* Optional, for centering */
+}
+
+a {
+    text-decoration: none; /* Removes the underline */
+  }
+  
+  a .star, a .stripe {
+    display: block; /* Ensures the whole star/stripe is clickable */
+  }
+  .record-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+}
+
+
+
+body {
+  font-family: Helvetica, sans-serif;
+  line-height: 1.6;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Header styling */
+header {
+  top: 0;
+  width: 100%;
+  background-color: black;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 1rem;
+  text-align: center;
+}
+
+.scroll-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 5rem;
+  transition: background-color 1s;
+}
+
+#flag-summary {
+  background-color: #b30000; /* Red background */
+}
+
+#flag-summary h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#flag-summary p {
+  font-size: 1.5rem;
+  max-width: 800px;
+}
+
+#website-purpose {
+  background-color: #041E42;
+}
+
+#website-purpose h2 {
+  font-size: 3rem;
+  font-weight: bold;
+
+}
+#website-purpose p {
+  font-size: 1.5rem;
+ 
 }
