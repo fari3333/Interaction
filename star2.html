@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OutKast - Song Page</title>
+    <link rel="stylesheet" href="artstyles.css">
+    <style>
+        /* General Page Style */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+        }
+
+        /* Record Container */
+        .record-container {
+            position: relative;
+            width: 600px;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Spinning Vinyl Disk */
+        .disk {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 0%;
+            animation: spin 5s linear infinite;
+            z-index: 1; /* To make sure it is behind the album cover */
+        }
+
+        /* Spinning Animation */
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Album Cover */
+        .album-cover {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: scale-down;
+            z-index: 2; /* Higher z-index to stay above the disk */
+        }
+
+        /* Optional: Hide the audio player */
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+ <!-- Link back to the homepage -->
+
+<body>
+    <div class="record-container">
+        <img class="disk" src="https://i.postimg.cc/J7cm8p23/vinylblack.png" alt="Vinyl Disk">
+        <img src="Outcast Cover.jpg" alt="OutKast Album Cover" class="album-cover">
+    </div>
+
+    <!-- Background Music -->
+    <audio id="background-music" autoplay loop>
+        <source src="So Fresh, So Clean.mp3" type="audio/mp3">
+    </audio>
+    <div class=".button">
+        <a href="index.html" class=".button">Back to The Flag</a>
+    </div>
+
+    <script>
+        // Toggle audio on clicking the album cover
+        document.querySelector('.album-cover').addEventListener('click', function() {
+            const music = document.getElementById('background-music');
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,7 +1,8 @@
 body
 
 { 
-cursor: url(cursor.png)
+cursor: url(cursor.png);
+position:relative;
 }
 
 
@@ -77,12 +78,10 @@ body {
     align-items: center;
     position: relative;
     padding-bottom: 5rem;
-    padding-top: 5rem;
   }
  .USA-flag {
   margin:auto;
-  width: 1200px; /* Set flag width */
-  height: 650px; 
+  width: 100%; /* Set flag width */
   box-shadow: 0px 20px 80px 10px rgba(0, 0, 0, 0.15);
   position: relative;
 }
@@ -208,4 +207,28 @@ header nav a {
 #website-purpose p {
   font-size: 1.5rem;
  
+}
+
+
+#title{
+  height:300px;
+  width:500px;
+  background-color:blue;
+  position: absolute;
+  top:20px;
+  left:50%;
+  transform: translateX(-50%);
+  z-index:300;
+  animation-name: fade-in;
+  animation-duration:2000ms;
+  animation-delay:500ms;
+}
+
+@keyframes fade-in{
+  0% {
+    opacity:0%;
+  }
+  100%{
+    opacity:100%;
+  }
 }
